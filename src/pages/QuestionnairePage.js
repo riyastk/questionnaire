@@ -104,7 +104,7 @@ const QuestionnairePage = () => {
   const [ isResult, setIsResult ] = useState(false)
   const [ result, setResult ] = useState({})
   const [ counter, setCounter ] = useState(0)
-  const [ question, setQuestion ] = useState(questionsList.questionsList[4])
+  const [ question, setQuestion ] = useState(questionsList.questionsList[0])
 
   const clearQuestionnaire = () => {
     setIsResult(false)
@@ -119,11 +119,13 @@ const QuestionnairePage = () => {
     const newQuestion = questionsList.questionsList[counter + 1]
     setQuestion(newQuestion)
     setCounter(counter + 1)
+    window.scrollTo(0, 0);
   }
   const setPreviousQuestion = () => {
     const newQuestion = questionsList.questionsList[counter - 1]
     setQuestion(newQuestion)
     setCounter(counter - 1)
+    window.scrollTo(0, 0);
   }
   const submitQuestionnaire = () => {
     setIsResult(true)

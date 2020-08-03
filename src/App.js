@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from '../src/assets/logo.png'
 import QuestionnairePage from './pages/QuestionnairePage'
 import HomePage from './pages/HomePage'
+import ScrollToTop from './components/ScrollToTop'
 
 const Wrapper = styled.div`
   .navbar {
@@ -16,6 +17,7 @@ function App() {
   return (
     <Wrapper>
       <Router>
+        <ScrollToTop />
         <div className="navbar">
           <Link to="/">
             <div className="logo">
